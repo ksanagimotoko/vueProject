@@ -12,33 +12,33 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>Documentation</template>
+    <template #heading>Documentation 안녕하세요</template>
 
     Vue’s
     <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+    provides you with all information you need to get started. 김하윤입니다
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <ToolingIcon />
     </template>
-    <template #heading>Tooling</template>
+    <template #heading>Tooling이것저것</template>
 
     This project is served and bundled with
     <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
+    recommended IDE setup is 바꾸려니까
+    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode재미있습니다</a> +
+    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar히히</a>. If
+    you need to test your components and web pages, check out 삭제하는건
+    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress뭔가</a> and
     <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
+      >Cypress Component Testing무서워서</a
     >.
 
     <br />
 
-    More instructions are available in <code>README.md</code>.
+    More instructions are available in 추가만 하는 중입니다 <code>README.md</code>.
   </WelcomeItem>
 
   <WelcomeItem>
