@@ -22,10 +22,16 @@ import BMICalculator from './BMI/BMICalculator.vue';
 
 <style scoped>
 
+
 #app {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
   line-height: 3;
 }
+
 /*
 header {
   line-height: 1.5;
