@@ -1,14 +1,21 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import MJ from './components/MJ.vue'
+import Bmi from './components/Bmi.vue'
+// import 해올 때 밑의 header나 main에 <파일명 />이렇게 추가를 해야 선언해올 수 있음
 </script>
 
+
 <template>
+ 
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/logo.png" width="200" height="200" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="You Can Do It!" />
+      <MJ />
+      <Bmi />
     </div>
   </header>
 
