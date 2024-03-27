@@ -1,23 +1,37 @@
 <template>
   <div id="app">
     <div class="container">
-      <h2 class="title"> BMI 계산기</h2>
-      <div>
-        <label for = "height"> 키(cm) : </label>
-        <input type="number" id="height" v-model="height">
-      </div>
-      <div>
-        <label for="weight"> 몸무게(kg) : </label>
-        <input type="number" id="weight" v-model="weight">
-  </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
 
-  <button @click="calculateBMI"> BMI 계산하기 </button>
-  <button @click="reset"> 초기화 </button>
-  <div class="result" v-if="bmi !== null">
-    <h3> 당신의 BMI는 {{ bmi }} 입니다.</h3>
-    <P> {{ bmiCategory }} </P>
-    <img :src="bmiImage" alt="BMI Image">
-  </div>
+          <h2 class="title mt-5 mb-4 text-center"> BMI 계산기</h2>
+
+          <div class="form-group">
+            <label for = "height"> 키(cm) : </label>
+            <input type="number" class="form-control" id="height" v-model="height">
+          </div>
+
+          <div class="form-group">
+            <label for="weight"> 몸무게(kg) : </label>
+            <input type="number" class="form-control" id="weight" v-model="weight">
+          </div>
+
+          <button @click="calculateBMI" class="btn btn-primary btn-block"> BMI 계산하기 </button>
+          <button @click="reset" class="btn btn-primary btn-block"> 초기화 </button>
+        </div>
+
+    <div class="result row justify-content-center mt-4" v-if="bmi !== null">
+      <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4> 당신의 BMI는 {{ bmi }} 입니다.</h4>
+              <P> {{ bmiCategory }} </P>
+              <img :src="bmiImage" alt="BMI Image" class="bmi-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
   </div>
 

@@ -1,4 +1,5 @@
 @import './base.css';
+/* @import "../node_modules/bootstrap/scss/bootstrap"; */
 
 #app {
   display: flex;
@@ -6,11 +7,13 @@
   align-items: center;
   justify-content: center;
   line-height: 2.5;
+  width: 500px;
+  height: auto;
 
 }
 
 .container {
-  display: inline-block;
+  display: 'flex';
   background-color: #f0e6ff; 
   padding: 20px;
   border-radius: 10px; 
@@ -23,7 +26,13 @@
 }
 
 .result {
-  margin-top: 10px;
+  width: 800px;
+  height: auto;
+}
+
+.bmi-image {
+  max-width: 100%;
+  max-height: 300px;
 }
 
 button {
@@ -33,7 +42,6 @@ button {
   border: none; 
   border-radius: 5px; 
   cursor: pointer; 
-  margin-right: 20px;
 }
 
 button:hover {
