@@ -12,6 +12,7 @@
   </div>
 
   <button @click="calculateBMI"> BMI 계산하기 </button>
+  <button @click="reset"> 초기화 </button>
   <div class="result" v-if="bmi !== null">
     <h3> 당신의 BMI는 {{ bmi }} 입니다.</h3>
     <P> {{ bmiCategory }} </P>
@@ -22,16 +23,6 @@
 
 </template>
 
-<style>
-.container {
-  display: inline-block;
-  margin-top: 0px; /* 위쪽 여백 조절 */
-}
-
-.result {
-  margin-top: 20px;
-}
-</style>
 
 <script>
 
@@ -85,6 +76,11 @@ export default {
       } else {
         alert('키와 몸무게를 입력해주세요.');
       }
+    },
+    reset() {
+      this.height = null;
+      this.weight = null,
+      this.bmi = null;
     }
   }
 };

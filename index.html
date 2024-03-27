@@ -25,36 +25,5 @@
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>
-    <script>
-      new Vue ({
-         el : '#app'
-         data: {
-             height: null,
-             weight: null,
-             bmi: null
-         },
-     
-         computedL {
-             bmicatagory: function() {
-                 if (this.bmi === null) return '';
-                 if (this.bmi < 18.5) return '저체중';
-                 else if (this.bmi < 24.9) return '정상';
-                 else if (this.bmi <29.9) return '과체중';
-                 else return '비만';
-             }
-         },
-     
-         methods: {
-             calculateBMI: function() {
-                 if (this.height && this.weight) {
-                     const heightmeter = this.height / 100;
-                     this.bmi = (this.weight / (heightmeter*heightmeter)).toFixed(2);
-                 } else {
-                     alert('키와 몸무게를 입력해주세요.');
-                 }
-             }
-         }
-      });
-     </script>
   </body>
 </html>

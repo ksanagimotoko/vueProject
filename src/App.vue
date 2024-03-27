@@ -22,7 +22,7 @@ import BMICalculator from './BMI/BMICalculator.vue';
 
 <style scoped>
 
-
+/*
 #app {
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ import BMICalculator from './BMI/BMICalculator.vue';
   justify-content: center;
   height: 50%;
   line-height: 3;
-}
+} */
 
 /*
 header {
