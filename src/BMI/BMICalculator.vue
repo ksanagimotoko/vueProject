@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-      <h2> BMI 계산기</h2>
+      <h2 class="title"> BMI 계산기</h2>
       <div>
         <label for = "height"> 키(cm) : </label>
         <input type="number" id="height" v-model="height">
