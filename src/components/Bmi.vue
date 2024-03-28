@@ -15,7 +15,7 @@
             <p>{{ bmi.toFixed(2) }}</p>
             <!-- toFixed(숫자)는 소수점 둘째 자리까지 반올림 할 수 있는 기능(bmi로 도출된 결과값을)-->
             <p>{{ BMICategory(bmi) }}</p>
-            <img class="bmi--img" v-if="selectImg === '저체중'" src='/Users/iminji/vueProject/src/assets/low.png'>
+            <img class="bmi--img" v-if="selectImg === '저체중'" src='/Users/iminji/vueProject/src/assets/low.jepg'>
             <img class="bmi--img" v-else-if="selectImg === '정상체중'" src='/Users/iminji/vueProject/src/assets/normal.jpeg'>
             <img class="bmi--img" v-else-if="selectImg === '과체중'" src='/Users/iminji/vueProject/src/assets/high.jpeg'>
             <img class="bmi--img" v-else src='/Users/iminji/vueProject/src/assets/danger.jpeg'>
