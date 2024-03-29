@@ -1,5 +1,5 @@
 <script setup>
-import BMICalculator from './BMI/BMICalculator.vue';
+import BMICalculator3 from './BMI/BMICalculator3.vue';
 
 </script>
 
@@ -15,7 +15,8 @@ import BMICalculator from './BMI/BMICalculator.vue';
   </header>
 
   <main>
-    <BMICalculator />
+    <BMICalculator3 />
+
   </main>
 
 </template>
