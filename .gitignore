@@ -1,1 +1,25 @@
-node_module/
+# 파일 무시하기
+# 파일이름.txt
+index.html
+jsconfig.json
+package-lock.json
+package.json
+README copy.md
+README.md
+vite.config.js
+
+# 디렉토리 무시하기
+# 디렉토리명/
+node_modules/
+public/
+src/assets/
+vue-cli-project/
+
+
+# 특정 확장자 무시하기
+# *.확장자명
+
+# 와일드카드를 사용하여 패턴 지정하기
+# temp-* # temp-로 시작하는 모든 파일
+
+# 여기에 무시하고자 하는 파일이나 디렉토리를 새로 추가하였다면 이 .gitignore 파일을 소스트리에 커밋을 하면 된다
