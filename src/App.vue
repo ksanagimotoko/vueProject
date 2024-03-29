@@ -3,12 +3,17 @@
 //import TheWelcome from './components/TheWelcome.vue'
 //import MJ from './components/MJ.vue'
 //import Bmi from './components/Bmi.vue'
-import BmiPop from './components/BmiPop.vue'
+//import BmiPop from './components/BmiPop.vue'
+//import BmiDate from './components/BmiDate.vue'
+//import BmiCalendar from './components/BmiCalendar.vue'
+//import EventModal from './components/EventModal.vue'
+import BmiCalculation from './components/BmiCalculation.vue'
 // import 해올 때 밑의 header나 main에 <파일명 />이렇게 추가를 해야 선언해올 수 있음
 
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
-const logoSrc = ref('./assets/profile.png');
+const defaultLogoSrc = './assets/profile.jpeg'; // 기본 이미지 경로
+const logoSrc = ref(defaultLogoSrc);
 
 const updateLogo = (event) => {
   const file = event.target.files[0];
@@ -20,22 +25,30 @@ const updateLogo = (event) => {
     reader.readAsDataURL(file);
   }
 };
+
+onMounted(() => {
+  // 컴포넌트가 마운트 될 때 기본 이미지를 설정합니다.
+  logoSrc.value = defaultLogoSrc;
+});
 </script>
 
 
 <template>
  
  <header>
-    <div class="picture-container">
+  <div class="picture-container">
       <div class="picture">
         <label for="picture-choose">
-          <img src="./assets/profile.jpeg" class="border border-dark border-2 picture-src" id="pictureChoose" title="프로필 사진을 선택하세요">
+          <img :src="logoSrc" class="border border-dark border-2 picture-src" id="pictureChoose" title="프로필 사진을 선택하세요">
         </label>
         <input type="file" id="picture-choose" ref="fileInput" style="display: none;" @change="updateLogo">
       </div>
       <h6 class="text-center">프로필 사진 선택</h6>
-    
     </div>
+
+      <!--프로필 사진을 본인이 원한는 사진으로 설정하게끔 해주고 싶어서 만들었으나 아직 수정 중-->
+    
+
     <!--<img alt="Vue logo" class="logo" src="./assets/logo.png" width="200" height="200" />-->
     <!--<img alt="Vue logo" class="logo border border-dark border-2 rounded-circle" src="./assets/bmilogo.png" width="200" height="200" />
     -->
@@ -43,8 +56,13 @@ const updateLogo = (event) => {
     <div class="wrapper">
       <!--<HelloWorld msg="You Can Do It!" />
       <MJ />
-      <Bmi />-->
+      <Bmi />
       <BmiPop />
+      <BmiDate />
+      <BmiCalendar />
+      <EventModal />-->
+      <BmiCalculation />
+      
     </div>
   </header>
 
@@ -72,7 +90,6 @@ const updateLogo = (event) => {
   height: 150px;
 }
 
-/* 파일 선택 부분을 동그랗게 만듭니다. */
 .picture input[type="file"] {
   position: absolute;
   top: 0;
@@ -82,4 +99,5 @@ const updateLogo = (event) => {
   opacity: 0;
   cursor: pointer;
 }
+/* 파일 선택 부분을 동그랗게 만들려고 했었음*/
 </style>
