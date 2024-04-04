@@ -21,7 +21,7 @@ import BMICalculator3 from './BMI/BMICalculator3.vue';
 
 </template>
 
-<style scoped>
+<style>
 
 /*
 #app {
