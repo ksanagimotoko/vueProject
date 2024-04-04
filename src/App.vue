@@ -6,14 +6,16 @@
 //import BmiPop from './components/BmiPop.vue'
 //import BmiDate from './components/BmiDate.vue'
 //import BmiCalendar from './components/BmiCalendar.vue'
+import CopyCalendar from './components/CopyCalendar.vue'
 //import EventModal from './components/EventModal.vue'
-import BmiCalculation from './components/BmiCalculation.vue'
+//import BmiCalculation from './components/BmiCalculation.vue'
 // import 해올 때 밑의 header나 main에 <파일명 />이렇게 추가를 해야 선언해올 수 있음
 
 import { ref, onMounted } from 'vue';
 
-const defaultLogoSrc = './assets/profile.jpeg'; // 기본 이미지 경로
-const logoSrc = ref(defaultLogoSrc);
+const defaultLogoSrc = ''; 
+const logoSrc = ref('../public/assets/profile.jpeg');
+// 경로가 잘못,,? 은 아닌데 암튼 경로 떄문에 프로필 사진이 안되는거였음
 
 const updateLogo = (event) => {
   const file = event.target.files[0];
@@ -27,8 +29,10 @@ const updateLogo = (event) => {
 };
 
 onMounted(() => {
-  // 컴포넌트가 마운트 될 때 기본 이미지를 설정합니다.
-  logoSrc.value = defaultLogoSrc;
+  // 컴포넌트가 마운트 될 때 기본 이미지를 설정한다.
+  // let k = defaultLogoSrc;
+  // logoSrc.value = k;
+
 });
 </script>
 
@@ -45,8 +49,6 @@ onMounted(() => {
       </div>
       <h6 class="text-center">프로필 사진 선택</h6>
     </div>
-
-      <!--프로필 사진을 본인이 원한는 사진으로 설정하게끔 해주고 싶어서 만들었으나 아직 수정 중-->
     
 
     <!--<img alt="Vue logo" class="logo" src="./assets/logo.png" width="200" height="200" />-->
@@ -59,9 +61,12 @@ onMounted(() => {
       <Bmi />
       <BmiPop />
       <BmiDate />
+      <EventModal />
       <BmiCalendar />
-      <EventModal />-->
-      <BmiCalculation />
+      <BmiCalculation />-->
+      <CopyCalendar />
+      
+      
       
     </div>
   </header>

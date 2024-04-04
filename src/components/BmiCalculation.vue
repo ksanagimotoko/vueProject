@@ -32,15 +32,15 @@
             </div>
     
             <!-- 계산기 -->
-            <div class="col-md-6">
+            <div class="col-md-6 mt-5 text-center">
                 <h2>계산기</h2>
-                <!-- 계산기 입력 필드 및 버튼 추가 -->
+            </div>
+            <!-- 계산기 입력 필드 및 버튼 추가 -->
                 <div>
                     <input type="text" v-model="calculation" class="form-control" placeholder="계산식을 입력하세요">
                     <button @click="calculate" class="btn btn-primary mt-3 text center">계산하기</button>
                     <p class="mt-3">결과: {{ result }}</p>
                 </div>
-            </div>
             <!-- 사칙연산 필드 추가 -->
             <div class="col-md-6 text-center">
                 <h2>사칙연산</h2>
