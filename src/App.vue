@@ -1,40 +1,48 @@
 <script setup>
-import BMICalculator3 from './BMI/BMICalculator3.vue';
+import { ref } from 'vue';
+import layout1 from './components/layout1.vue'
+import TheWelcome from './components/TheWelcome.vue'
 
+const layouts = ref([layout1]);
+const layoutCounter = ref(1);
+
+function addLayout() {
+  layouts.value.push(layout1);
+  layoutCounter.value++;
+}
 </script>
 
 <template>
   <header>
-   <!--
-   <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />-->
 
-    <div class="wrapper">
-      <HelloWorld msg="You 99999did it!" />
-    </div>
-    -->
   </header>
 
   <main>
-    <BMICalculator3 />
-
+    <div class="btn">
+      <button @click="addLayout"> 추가 </button>
+      <div v-for="layout in layouts" :key="layoutCounter">
+        <layout1 />
+      </div>
+    </div>
   </main>
 
 </template>
 
-<style>
+<script setup>
 
-/*
-#app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 50%;
-  line-height: 3;
-} */
 
-/*
-header {
+
+</script>
+
+<style scoped>
+
+/* #nsv_root {
+      margin: 0;
+      height: 100%;
+    }
+     */
+/* header {
   line-height: 1.5;
 }
 
@@ -59,6 +67,5 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-} 
-*/
+} */
 </style>
